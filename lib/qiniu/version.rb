@@ -1,5 +1,17 @@
 # -*- encoding: utf-8 -*-
 
 module Qiniu
-  VERSION = "6.5.3"
+    module Version
+      MAJOR = 6
+      MINOR = 5
+      PATCH = 3
+      # Returns a version string by joining <tt>MAJOR</tt>, <tt>MINOR</tt>, and <tt>PATCH</tt> with <tt>'.'</tt>
+      #
+      # Example
+      #
+      #   Version.to_s # '1.0.2'
+      def self.to_s
+        [MAJOR, MINOR, PATCH].join('.')
+      end
+    end # Version
 end # module Qiniu
